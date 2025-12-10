@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+    <link rel='stylesheet' href='./css/style.css' type='text/css' />
+</head>
+
+
+<body>
+    <div class="grid-container">
+        <div class="title">
+            <h1>Can I Work There?</h1>
+        </div>
+        <div class="content">
+            <div class="text-description">
+
+
+                <p><span class="title_content">DATASET <br />
+                    </span> We measure three types of real-time data to provide an insight into the studying/working
+                    environment for users. The noise level is sensed by an MAX9814 sound sensor, converting sound
+                    amplitude into an absolute decibel. The Wi-Fi signal strength of eduroam, which is the most commonly
+                    used network in universities, is scanned by an ESP32 board. The estimated number of people around is
+                    ?
+                    <br>
+                    <br>
+                    The sensor and the board are installed in a sensing box. The real-time data with a ? second interval
+                    is transferred from the sensing box to a separate gauge and a corresponding app through MQTT for
+                    better visualisation, helping users intuitively directed to the information.
+                </p>
+
+                <p><span class="title_content">DATA DEVICE (Physical)<br />
+                    </span> There are two physical devices for our project: a sensor box and a real-time gauge. We aim
+                    to provide a flexible user experience that
+                    lets users freely choose where to sense the data and where to install the gauge. For instance, users
+                    can install the sensor box in the centre of a shared working environment while placing the gauge in
+                    a spacious area, facilitating everyone to come and see.
+                    <br>
+                    <br>
+                    The sensor box contains a MAX9814 sound sensor and an ESP32 board to collect real-time data and
+                    transmit it to the MQTT broker. The gauge dial plate indicates the real-time sound level from the
+                    sensor box with a pointer, ranging from 30dB to 90dB. (We can add more details, such as the green to
+                    the red colour of the dial plate.) The LED strip on the bottom of the gauge indicates the Wi-Fi
+                    signal strength. This helps users quickly see if a weak connection is caused by the network or their
+                    devices themselves. Both the progressive colour system (from red to green) and the number of
+                    illuminated LEDs provide immediate visual feedback to users. The LED strip follows the working rule
+                    as below:
+                </p>
+                <ul>
+                    <li>-70 ~ -80 dBm: One red LED light on.</li>
+                    <li>-60 ~ -70 dBm: Two orange LED lights on.</li>
+                    <li>-50 ~ -60 dBm: Three yellow LED lights on.</li>
+                    <li>-40 ~ -50 dBm: Four lime green LED lights on.</li>
+                    <li>-30 ~ -40 dBm: Five green LED lights on.</li>
+                </ul>
+                <p>
+                    By combining noise and Wi-Fi monitoring in a single display, users can make decisions about their
+                    studying/working environment intuitively.
+                </p>
+
+                <p><span class="title_content">DATA DEVICE (Digital)<br />
+                    </span> The app's dashboard consists three main visual elements. On the top left, we have a 24-hour
+                    historical view of sound and Wi-Fi intensity. Below that, the bottom-left chart shows real-time data
+                    streamed via MQTT over the last minute. In the bottom-right corner, a four-quadrant chart analyzes
+                    the environment to offer study suggestions based on signal and noise levels. Current real-time
+                    values are displayed in the top-right corner of the dashboard, and the estimated number of people in
+                    the classroom is shown on the far left.
+                </p>
+                <p><span class="title_content">HOW TO<br />
+                </span> Some information</p>
+            </div>
+            <div class="media">
+                <img src="https://github.com/ucl-casa-ce/Open-Gauges/blob/main/Contributed/NoiseGauge/data/img/NoiseGauge.jpg?raw=true"
+                    alt="Image">
+                <video
+                    src="https://github.com/ucl-casa-ce/Open-Gauges/blob/main/Contributed/NoiseGauge/data/img/NoiseGaugeAR.mp4?raw=true"
+                    controls></video>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-title">
+                <h2>CE 2025 - 2026</h2>
+            </div>
+            <div class="group-name">
+                <p>Group 1 Laxr</p>
+            </div>
+            <div class="github-link">
+                <a target=_blank href="https://github.com/Annie-Zhu1210/CASA0019_CanIWorkHere">GitHub Link</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
